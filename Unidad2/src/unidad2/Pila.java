@@ -11,10 +11,10 @@ package unidad2;
  */
 public class Pila {
     int tope=-1;
-    int v[];
+    Object v[];
 
     public Pila(int max) {
-        v=new int [max];
+        v=new Object [max];
     }   
     public boolean isFull(){
         if(tope==v.length-1)
@@ -28,7 +28,7 @@ public class Pila {
         else
             return false;
     }
-    public void push(int n){
+    public void push(Object n){
         if(isFull()==true)
             System.out.println("La pila esta llena");
         else
@@ -41,8 +41,8 @@ public class Pila {
                 v[tope]=n;
             }       
     }
-    public int pop(){
-        int a;
+    public Object pop(){
+        Object a;
         if(isEmpty()==true){
             System.out.println("La pila esta vacia");
             return -1;
@@ -53,8 +53,8 @@ public class Pila {
         }
         return a;
     }
-    public int getTope(){
-        int a;
+    public Object getTope(){
+        Object a;
         if(isEmpty()==true){
             System.out.println("La pila esta vacia");
             return -1;
