@@ -11,26 +11,11 @@ package unidad2;
  */
 public class TestPila {
     public static void main(String [] args){
-        Object n;
-        Pila p=new Pila(6);
-        p.getTope();
+        PilaDinamica p=new PilaDinamica();
+        for(int i=0;i<=30;i++){
+            p.push(i);
+        }  
         p.pop();
-        p.isEmpty();
-        p.push(2);
-        p.push("s");
-        p.push(23);
-        p.push(2.5);
-        p.push(1);
-        p.isFull();
-        p.push("s");
-        p.isFull();
-        p.isEmpty();
-        p.push("A");
-        n = p.getTope();
-        System.out.println(n);
-        p.pop();
-        p.pop();
-        n=p.getTope();
-        System.out.println(n);
+        System.out.println(p.getTope());
     }
 }
